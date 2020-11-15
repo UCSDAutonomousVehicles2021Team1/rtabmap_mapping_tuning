@@ -1,0 +1,5 @@
+{
+    "datadir": "data/poses",
+    "plotsdir": "results/plots",
+    "metricdir": "results/metrics"
+}
