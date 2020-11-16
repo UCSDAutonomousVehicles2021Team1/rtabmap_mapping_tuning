@@ -28,6 +28,6 @@ RUN pip3 install --no-cache-dir numpy==1.16.0 \
                                 rospkg \
                                 notebook
 
-RUN /bin/bash -c "wget https://raw.githubusercontent.com/ucsd-ets/datahub-base-notebook/master/scripts/run_jupyter.sh; chmod 755 run_jupyter.sh"
+RUN /bin/bash -c "cd /; wget https://raw.githubusercontent.com/ucsd-ets/datahub-base-notebook/master/scripts/run_jupyter.sh; chmod 755 run_jupyter.sh"
 # Cloning
 RUN /bin/bash -c "git clone https://github.com/sisaha9/slamevaluations.git; source /opt/ros/melodic/setup.bash"
