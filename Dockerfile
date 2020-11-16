@@ -24,7 +24,8 @@ RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir numpy==1.16.0 \
                                 scipy==1.2.0 \
                                 pyyaml \
-                                rospkg
+                                rospkg \
+                                notebook
 
 # Cloning
 RUN /bin/bash -c "git clone https://github.com/sisaha9/slamevaluations.git; source /opt/ros/melodic/setup.bash"
