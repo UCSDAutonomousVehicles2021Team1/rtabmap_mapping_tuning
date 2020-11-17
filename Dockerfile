@@ -22,8 +22,9 @@ RUN apt-get update --fix-missing && \
 # Upgrade pip
 RUN pip3 install --upgrade pip
 
-RUN pip3 install --no-cache-dir numpy==1.16.0 \
-                                scipy==1.2.0 \
+RUN pip3 install --no-cache-dir numpy \
+                                scipy \
+                                pandas \
                                 pyyaml \
                                 rospkg \
                                 notebook
