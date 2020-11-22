@@ -28,7 +28,8 @@ RUN pip3 install --no-cache-dir numpy \
                                 pyyaml \
                                 rospkg \
                                 notebook \
-                                matplotlib
+                                matplotlib \
+                                seaborn
 # Cloning
 RUN /bin/bash -c "cd /; wget https://raw.githubusercontent.com/ucsd-ets/datahub-base-notebook/master/scripts/run_jupyter.sh; chmod 755 run_jupyter.sh"
 WORKDIR /tmp
