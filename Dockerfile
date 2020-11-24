@@ -13,11 +13,6 @@ RUN apt-get update --fix-missing && \
                        build-essential \
                        cmake \
                        vim \
-                       ros-melodic-genpy \
-                       ros-melodic-rtabmap \
-                       ros-melodic-rtabmap-ros \
-                       ros-melodic-gazebo-* \
-                       ros-melodic-rviz \
                        wget
 # Upgrade pip
 RUN pip3 install --upgrade pip
