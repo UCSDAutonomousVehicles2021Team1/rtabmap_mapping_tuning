@@ -4,10 +4,9 @@ FROM ros:melodic-robot-bionic
 USER root
 
 
-# Update apt repo and pip2, and install python3, pip3
+# Install python3, pip3
 RUN apt-get update --fix-missing && \
-    apt-get install -y python-pip \
-                       python3-dev \
+    apt-get install -y python3-dev \
                        python3-pip \
                        git \
                        build-essential \
@@ -17,11 +16,6 @@ RUN apt-get update --fix-missing && \
                        
 # Upgrade pip
 RUN pip3 install --upgrade pip
-
-RUN \
-   echo 'alias python="/usr/bin/python3"' >> /root/.bashrc && \
-   echo 'alias pip="/usr/bin/pip3"' >> /root/.bashrc && \
-   source /root/.bashrc
 
 RUN pip3 install --no-cache-dir numpy \
                                 scipy \
