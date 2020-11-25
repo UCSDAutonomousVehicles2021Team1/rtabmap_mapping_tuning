@@ -18,8 +18,10 @@ RUN apt-get update --fix-missing && \
 # Upgrade pip
 RUN pip3 install --upgrade pip
 
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3
-RUN update-alternatives --install /usr/bin/pip pip /usr/bin/python3
+RUN \
+   echo 'alias python="/usr/bin/python3"' >> /root/.bashrc && \
+   echo 'alias pip="/usr/bin/pip3"' >> /root/.bashrc && \
+   source /root/.bashrc
 
 RUN pip3 install --no-cache-dir numpy \
                                 scipy \
