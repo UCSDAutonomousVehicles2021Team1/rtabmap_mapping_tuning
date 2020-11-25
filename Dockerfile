@@ -15,10 +15,11 @@ RUN apt-get update --fix-missing && \
                        vim \
                        wget
                        
-RUN ln -s /usr/bin/python3 /usr/bin/python && \
-    ln -s /usr/bin/pip3 /usr/bin/pip
 # Upgrade pip
 RUN pip3 install --upgrade pip
+
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3
+RUN update-alternatives --install /usr/bin/pip pip /usr/bin/python3
 
 RUN pip3 install --no-cache-dir numpy \
                                 scipy \
