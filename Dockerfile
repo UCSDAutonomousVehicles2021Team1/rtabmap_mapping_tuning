@@ -14,6 +14,9 @@ RUN apt-get update --fix-missing && \
                        cmake \
                        vim \
                        wget
+                       
+RUN ln -s /usr/bin/python3 /usr/bin/python && \
+    ln -s /usr/bin/pip3 /usr/bin/pip
 # Upgrade pip
 RUN pip3 install --upgrade pip
 
