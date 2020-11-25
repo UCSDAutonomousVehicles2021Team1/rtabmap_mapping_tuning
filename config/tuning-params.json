@@ -1,5 +1,6 @@
 {
     "datadir": "data/poses",
     "plotsdir": "results/plots",
-    "metricdir": "results/metrics"
+    "metricdir": "results/metrics",
+    "evaluatedir": "/tmp/slamevaluations"
 }
