@@ -1,6 +1,6 @@
 {
-    "indir": "data/poses",
+    "files": ["data/poses/param1_slam.txt", "data/poses/param1_odom.txt", "data/poses/param1_gt.txt"],
     "outdir": "data/report",
     "report_in_path": "notebooks/report.ipynb",
-    "report_out_path": "report/report.html"
+    "report_out_path": "results/report.html"
 }

@@ -1,4 +1,4 @@
 {
-    "datadir":"C:/Users/jayry/Documents/GitHub/dsc180a0201checkpoint2/test/testdata",
-    "outdir":"results/test_results"
+    "rawdir": "test/testdata/",
+    "posedir": "data/poses"
 }

@@ -4,7 +4,7 @@ import nbformat
 from nbconvert import HTMLExporter
 
 
-def convert_notebook(report_in_path, report_out_path, **kwargs):
+def convert_notebook(files, outdir, report_in_path, report_out_path, **kwargs):
 
     curdir = os.path.abspath(os.getcwd())
     indir, _ = os.path.split(report_in_path)
