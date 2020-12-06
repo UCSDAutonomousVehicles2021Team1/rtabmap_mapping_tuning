@@ -26,4 +26,4 @@ RUN pip install --no-cache-dir numpy \
 # Cloning
 USER jovyan
 WORKDIR /tmp
-RUN /bin/bash -c "git clone https://github.com/sisaha9/slamevaluations.git"
+RUN /bin/bash -c "git clone https://github.com/sisaha9/slamevaluations.git slameval"
