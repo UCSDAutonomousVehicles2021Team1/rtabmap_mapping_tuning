@@ -24,5 +24,6 @@ RUN pip install --no-cache-dir numpy \
                                matplotlib \
                                seaborn
 # Cloning
+USER jovyan
 WORKDIR /tmp
 RUN /bin/bash -c "git clone https://github.com/sisaha9/slamevaluations.git"
