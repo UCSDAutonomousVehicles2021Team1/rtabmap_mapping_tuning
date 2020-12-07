@@ -40,7 +40,13 @@ def main(targets):
         convert_notebook(**eda_config)
         find_metrics(**tuning_config)
         create_launch_files(**generate_config)
-
+        
+    if 'all' in targets:
+        move_data(**data_config)
+        main_eda(**eda_config)
+        convert_notebook(**eda_config)
+        find_metrics(**tuning_config)
+        create_launch_files(**generate_config)
 
 if __name__ == '__main__':
 
