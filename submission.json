@@ -3,5 +3,5 @@
     "build": "run.py",
     "library": ["src"],
     "notebook": ["notebooks/report.ipynb"],
-    "targets": ["data", "eda", "tuning", "generate", "test"] 
+    "targets": ["data", "eda", "tuning", "generate", "test", "all"] 
 }
