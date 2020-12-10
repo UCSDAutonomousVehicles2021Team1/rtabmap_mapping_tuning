@@ -13,7 +13,8 @@ def find_metrics(datadir, plotsdir, metricdir, metricfile, evaldir):
         subprocess.call(["rm", metricdir + metricfile])
     subprocess.call(["touch", metricdir + metricfile])
     
-    for file in set(np.apply_along_axis(lambda x: x[0][:x[0].find('_')], 0, np.array([os.listdir(datadir)]))):
+    for file in list(filter(lambda x: x.endswith('.yaml'), os.listdir(datadir))):
+        file = file[:-5]
         ate = subprocess.run(["python", evaldir + "evaluate_ate.py", datadir + file + '_slam.txt', datadir + file + '_gt.txt', "--plot", plotsdir + file + "_ate.png"], stdout=subprocess.PIPE, text = True) 
         rpe = subprocess.run(["python", evaldir + "evaluate_rpe.py", datadir + file + '_odom.txt', datadir + file + '_gt.txt', "--plot", plotsdir + file + "_rpe.png", "--fixed_delta"], stdout=subprocess.PIPE, text = True) 
         file1 = open(metricdir + metricfile, "a")
