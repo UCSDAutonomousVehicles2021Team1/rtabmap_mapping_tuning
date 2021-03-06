@@ -13,7 +13,7 @@ Tuning pipeline for the RTABMAP algorithm
 Takes a bunch of configuration files and pose data provided by the user and returns the best out of them using popular metric ATE. It loads it into a RTABMAP base launch file that can then be used by the user after changing topics to their own car
 
 ## Targets
-"data", "eda", "tuning", "generate", "test", "all"
+
 1. data:
 
   This target allows you to move data into the main repository. For formatting instructions go to test/testdata and see how the data inputted should be arranged
@@ -37,8 +37,6 @@ Takes a bunch of configuration files and pose data provided by the user and retu
 6. all:
 
   This target works similarly to the test data except it runs on the data inputs you specified in data-params.json under config
-
-Currently we don't support running train, evaluate or inference individually. Please use them all together
 
 Example call: ```python run.py data eda tuning generate```
 
