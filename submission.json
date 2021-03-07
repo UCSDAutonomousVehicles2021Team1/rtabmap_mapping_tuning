@@ -1,8 +1,0 @@
-{
-    "config": ["config/data-params.json", "config/eda-params.json", "config/tuning-params.json", "config/generate-params.json", "config/test-params.json"],
-    "build": "run.py",
-    "library": ["src"],
-    "notebook": ["notebooks/report.ipynb"],
-    "targets": ["data", "eda", "tuning", "generate", "test", "all"],
-    "dockerhub-id": "sisaha9/chp2:latest"
-}
